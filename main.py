@@ -2,6 +2,7 @@ from calculator.add import add
 from calculator.subtract import subtract
 from calculator.multiply import multiply
 from calculator.divide import divide
+from calculator.multiply_with_self import multiply_with_self
 
 
 def main():
@@ -25,8 +26,9 @@ def main():
     print("2. Subtract 3")
     print("3. Multiply 4")
     print("4. Divide 5")
+    print("5. Multiply with self 6")
 
-    choice = input("Enter choice (1/2/3/4): ")
+    choice = input("Enter choice (1/2/3/4/5): ")
 
     if choice == '1':
         print(f"The result of addition is: {add(a, b)}")
@@ -39,6 +41,8 @@ def main():
             print(f"The result of division is: {divide(a, b)}")
         except ValueError as e:
             print(e)
+    elif choice == '5':
+        print(f"multiplication with self is: {multiply_with_self(a)}")
     else:
         print("Invalid input")
 
